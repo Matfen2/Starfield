@@ -1,0 +1,406 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: auto;
+    display: block;
+}
+
+// MIXIN & ROOT
+$firstColor: azure;
+$secondColor: black;
+$thirdColor: darkred;
+$fourColor: darkgoldenrod;
+$fiveColor: rgb(240, 178, 23);
+$sixColor: rgb(70, 70, 209);
+$sevenColor: rgb(204, 4, 4);
+
+@mixin flex ($flexDirection) {
+    display: flex;
+    flex-direction: $flexDirection;
+}
+
+.show {
+    height: 790px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('/assets/picts/starfieldWallpaper.jpg');
+    .presentSite {
+        .navbar {
+            @include flex (row);
+            align-items: center;
+            justify-content: space-between;
+            .navbar-brand {
+                .img-fluid {
+                    height: 100px;
+                    cursor: pointer;
+                    max-width: 200px;
+                    margin-left: 20px;
+                }
+            }
+            #btnBars {
+                display: none;
+                font-size: 1.6em;
+                margin-right: 10px;
+                color: $firstColor;
+                border: transparent;
+                background: transparent;
+                &:hover {
+                    transform: rotate(90deg);
+                }
+            }
+            .containNav {
+                column-gap: 25px;
+                margin-right: 10px;
+                @include flex (row);
+                align-items: center;
+                .navbar-nav {
+                    column-gap: 30px;
+                    .nav-item {
+                        .nav-link {
+                            font-size: 1.2em;
+                            letter-spacing: 2px;
+                            color: $firstColor;
+                            font-family: nulshock;
+                            &:hover {
+                                opacity: 0.7;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .containShow {
+        position: absolute;
+        top: 50%;
+        left: 77%;
+        text-align: center;
+        color: $firstColor;
+        transform: translate(-50%, -50%);
+        .launcher {
+            font-size: 0.9em;
+            font-family: nulshock;
+        }
+        .dateRelease {
+            font-size: 3.0em;
+            margin-top: -10px;
+            font-weight: bold;
+        }
+        #btnPreRelease {
+            padding: 15px;
+            font-size: 0.7em;
+            color: $firstColor;
+            margin-right: 20px;
+            letter-spacing: 2px;
+            font-family: conthrax;
+            background: transparent;
+            border: 3px solid $firstColor;
+            &:hover {
+                background: $sevenColor;
+            }
+            a {
+                color: $firstColor;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+// ABOUT
+.about {
+    height: auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('/assets/picts/starfieldBackgroundWhite.jpg');
+    .containAbout {
+        padding: 40px;
+        .row {
+            .col-lg-8 {
+                h2 {
+                    font-family: nulshock;
+                }
+                p {
+                    font-family: conthrax;
+                }
+            }
+            .col-lg-4 {
+                text-align: center;
+                .img-fluid {
+                    height: 150px;
+                    max-width: 280px;
+                }
+            }
+        }
+    }
+    .present {
+        text-align: center;
+    }
+    .join {
+        padding: 15px;
+        margin: 25px;
+        .row {
+            .col-lg-9 {
+                line-height: 35px;
+                text-align: center;
+                .constellation {
+                    font-size: 2.0em;
+                    font-weight: bold;
+                    font-family: nulshock;
+                }
+                .updates {
+                    font-size: 1.0em;
+                    font-family: conthrax;
+                }
+                #btnJoinUs {
+                    padding: 6px;
+                    font-size: 0.7em;
+                    margin-right: 20px;
+                    letter-spacing: 2px;
+                    color: $secondColor;
+                    font-family: conthrax;
+                    background: transparent;
+                    border: 3px solid $secondColor;
+                    &:hover {
+                        color: $firstColor;
+                    }
+                }
+            }
+            .col-lg-3 {
+                text-align: center;
+                .img-fluid {
+                    height: 170px;
+                    margin-top: 20px;
+                    max-width: 150px;
+                    margin-left: 20px;
+                    text-align: center;
+                    padding-bottom: 15px;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+    .footer {
+        @include flex (row);
+        align-items: center;
+        justify-content: space-between;
+        .copyrigth {
+            margin-left: 15px;
+            font-family: nulshock;
+        }
+        #btnContact {
+            padding: 6px;
+            font-size: 0.7em;
+            margin-right: 10px;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+            color: $secondColor;
+            font-family: conthrax;
+            background: transparent;
+            border: 3px solid $secondColor;
+            &:hover {
+                color: $firstColor;
+                background: $secondColor;
+            }
+        }
+    }
+}
+
+// OFFCANVAS
+.offcanvas {
+    width: 100%;
+    height: 200px;
+    max-width: 150px;
+    background-color: $secondColor;
+    border-radius: 0px 0px 0px 40px;
+    .offcanvas-body {
+        border: 1px solid $firstColor;
+        background-color: $secondColor;
+        border-radius: 0px 0px 0px 40px;
+        #btnCloseStar {
+            position: relative;
+            top: -10%;
+            left: 87%;
+            font-size: 1.8em;
+            color: $thirdColor;
+            border: transparent;
+            background: transparent;
+        }
+        .containNav {
+            margin-top: -42px;
+            line-height: 28px;
+            text-align: center;
+            .navbar-nav {
+                .nav-item {
+                    .nav-link {
+                        font-size: 1.3em;
+                        color: $firstColor;
+                        font-family: nulshock;
+                        &:hover {
+                            opacity: 0.7;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// CONTACT
+#contact {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background: url('/assets/picts/starfieldBackgroundContact.jpg');
+    .modal-dialog {
+        .modal-content {
+            opacity: 0.9;
+            background: $secondColor;
+            #btnCloseContact {
+                position: relative;
+                top: 3%;
+                left: 46%;
+                cursor: pointer;
+                font-size: 1.4em;
+                color: $firstColor;
+                border: transparent;
+                background: transparent;
+            }
+            .modal-body {
+                margin-top: -20px;
+                h3 {
+                    text-align: center;
+                    color: $firstColor;
+                    margin-bottom: 16px;
+                    letter-spacing: 3px;
+                    font-family: conthrax;
+                }
+                form {
+                    color: $firstColor;
+                    text-align: center;
+                    margin-bottom: -10px;
+                    input {
+                        width: 35%;
+                        color: $firstColor;
+                        margin-right: 15px;
+                        margin-left: 15px;
+                        text-align: center;
+                    }
+                    textarea {
+                        width: 77%;
+                        text-align: center;
+                        margin: 20px auto;
+                        color: $firstColor;
+                    }
+                }
+            }
+            #btnSend {
+                margin: auto;
+                display: block;
+                padding: 10px;
+                font-size: 0.7em;
+                color: $firstColor;
+                letter-spacing: 2px;
+                font-family: conthrax;
+                background: transparent;
+                transition: all 0.25ms ease;
+                border: 3px solid $firstColor;
+                &:hover {
+                    background: rgb(106, 96, 244);
+                }
+                &:active {
+                    transform: translateY(20%);
+                }
+            }
+        }
+    }
+}
+
+// FONTS
+@font-face {
+    font-family: nulshock;
+    src: url('/assets/fonts/nulshock bd.otf');
+}
+
+@font-face {
+    font-family: conthrax;
+    src: url('/assets/fonts/conthrax-sb.otf');
+}
+
+@font-face {
+    font-family: soloist;
+    src: url('/assets/fonts/soloist1.ttf');
+}
+
+// MEDIA QUERRY
+@media screen and (max-width: 1024px) {
+    .show {
+        background-image: url('/assets/picts/starfieldLaunchBackground.jpg');
+        .containShow {
+            position: absolute;
+            top: 85%;
+            left: 50%;
+            .launcher {
+                display: none;
+            }
+            .dateRelease {
+                display: none;
+            }
+            #btnRelease {
+                background: $secondColor;
+                &:hover {
+                    background: $thirdColor;
+                }
+            }
+        }
+    }   
+}
+
+@media screen and (max-width: 992px) {
+    .show {
+        .presentSite {
+            .navbar {
+                #btnBars {
+                    display: block;
+                }
+                .containNav {
+                    display: none;
+                }
+            }
+        }
+    }
+    .about {
+        .containAbout {
+            .row {
+                .col-lg-8 {
+                    text-align: center;
+                }
+            }
+        }
+        .join {
+            .row {
+                .col-lg-9 {
+                    text-align: center;
+                }
+                .col-lg-3 {
+                    .img-fluid {
+                        margin-right: 40px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #contact {
+        .modal-dialog {
+            .modal-content {
+                
+            }
+        }
+    }
+}
