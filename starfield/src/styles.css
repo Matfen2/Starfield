@@ -119,6 +119,10 @@ body {
 .about .present {
   text-align: center;
 }
+.about .present .img-fluid {
+  height: 550px;
+  max-width: 950px;
+}
 .about .join {
   padding: 15px;
   margin: 25px;
@@ -289,6 +293,138 @@ body {
   transform: translateY(20%);
 }
 
+#joinUs {
+  background-image: url("/assets/picts/starfieldBackgroundLogIn.jpg");
+}
+#joinUs .modal-dialog .modal-content .modal-body #btnClose {
+  position: relative;
+  top: 1%;
+  left: 95%;
+  transform: translate(20%, -10%);
+  font-size: 1.6em;
+  margin: -30px auto;
+  color: darkred;
+  border: transparent;
+  background: transparent;
+}
+#joinUs .modal-dialog .modal-content .modal-body .row {
+  margin-top: -19px;
+}
+#joinUs .modal-dialog .modal-content .modal-body .row .col-lg-5 img {
+  height: 190px;
+  max-width: 450px;
+}
+#joinUs .modal-dialog .modal-content .modal-body .row .col-lg-7 .contentForm {
+  margin-top: 10px;
+  text-align: center;
+}
+#joinUs .modal-dialog .modal-content .modal-body .row .col-lg-7 .contentForm .log {
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: nulshock;
+}
+#joinUs .modal-dialog .modal-content .modal-body .row .col-lg-7 .contentForm form {
+  margin-top: -10px;
+}
+#joinUs .modal-dialog .modal-content .modal-body .row .col-lg-7 .contentForm form input {
+  margin-top: 10px;
+}
+#joinUs .modal-dialog .modal-content .modal-body .row .col-lg-7 .contentForm .optionConnect {
+  margin: 15px auto;
+  display: flex;
+  flex-direction: row;
+}
+#joinUs .modal-dialog .modal-content .modal-body .row .col-lg-7 .contentForm .optionConnect #btnConnect {
+  padding: 6px;
+  height: 35px;
+  font-size: 0.7em;
+  margin-right: 20px;
+  letter-spacing: 2px;
+  color: black;
+  font-family: conthrax;
+  background: transparent;
+  border: 3px solid black;
+}
+#joinUs .modal-dialog .modal-content .modal-body .row .col-lg-7 .contentForm .optionConnect #btnConnect:hover {
+  color: azure;
+  background: black;
+}
+#joinUs .modal-dialog .modal-content .modal-body .row .col-lg-7 .contentForm .optionConnect .inscribe a {
+  font-size: 0.8em;
+}
+
+#signUp {
+  background-image: url("/assets/picts/starfieldBackgroundSignUp.jpg");
+}
+#signUp .modal-dialog {
+  max-width: 750px;
+}
+#signUp .modal-dialog .modal-content {
+  width: 100%;
+}
+#signUp .modal-dialog .modal-content .modal-body #btnClose {
+  position: relative;
+  top: 1%;
+  left: 95%;
+  transform: translate(20%, -10%);
+  font-size: 1.6em;
+  margin: -30px auto;
+  color: darkred;
+  border: transparent;
+  background: transparent;
+}
+#signUp .modal-dialog .modal-content .modal-body .row {
+  margin: -15px auto;
+  margin-bottom: 15px;
+}
+#signUp .modal-dialog .modal-content .modal-body .row .col-lg-5 .img-fluid {
+  margin: auto;
+  display: block;
+  height: 100%;
+  max-width: 450px;
+}
+#signUp .modal-dialog .modal-content .modal-body .row .col-lg-7 .contentForm {
+  text-align: center;
+}
+#signUp .modal-dialog .modal-content .modal-body .row .col-lg-7 .contentForm .log {
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: nulshock;
+}
+#signUp .modal-dialog .modal-content .modal-body .row .col-lg-7 .contentForm form {
+  margin-top: -20px;
+}
+#signUp .modal-dialog .modal-content .modal-body .row .col-lg-7 .contentForm form .row .col-lg-6 {
+  line-height: 20px;
+}
+#signUp .modal-dialog .modal-content .modal-body .row .col-lg-7 .contentForm form .row .col-lg-6 input {
+  margin-top: 15px;
+}
+#signUp .modal-dialog .modal-content .modal-body .row .col-lg-7 .contentForm .optionConnect {
+  margin: 25px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#signUp .modal-dialog .modal-content .modal-body .row .col-lg-7 .contentForm .optionConnect #btnConnect {
+  padding: 6px;
+  height: 35px;
+  font-size: 0.7em;
+  margin-right: 20px;
+  letter-spacing: 2px;
+  color: black;
+  font-family: conthrax;
+  background: transparent;
+  border: 3px solid black;
+}
+#signUp .modal-dialog .modal-content .modal-body .row .col-lg-7 .contentForm .optionConnect #btnConnect:hover {
+  color: azure;
+  background: black;
+}
+#signUp .modal-dialog .modal-content .modal-body .row .col-lg-7 .contentForm .optionConnect .inscribe a {
+  font-size: 0.8em;
+}
+
 @font-face {
   font-family: nulshock;
   src: url("/assets/fonts/nulshock bd.otf");
@@ -338,5 +474,105 @@ body {
   }
   .about .join .row .col-lg-3 .img-fluid {
     margin-right: 40px;
+  }
+  #joinUs .modal-dialog .modal-content {
+    height: auto;
+  }
+  #joinUs .modal-dialog .modal-content .modal-body .row .col-lg-5 .img-fluid {
+    height: 450px;
+  }
+  #joinUs .modal-dialog .modal-content .modal-body .row .col-lg-7 .contentForm form input {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  #joinUs .modal-dialog .modal-content .modal-body .row .col-lg-7 .contentForm form .optionConnect {
+    padding-bottom: -25px;
+    margin: 20px auto;
+    justify-content: center;
+  }
+  #signUp .modal-dialog .modal-content .modal-body .row .col-lg-5 .img-fluid {
+    height: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  #signUp .modal-dialog .modal-content {
+    margin: auto;
+    display: block;
+    width: 65%;
+  }
+  #signUp .modal-dialog .modal-content .modal-body .row .col-lg-7 {
+    text-align: center;
+    height: 100%;
+    margin: 20px auto;
+    margin-bottom: -30px;
+  }
+  #signUp .modal-dialog .modal-content .modal-body .row .col-lg-7 .contentForm form .row .col-lg-6 input {
+    width: 100%;
+    display: block;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 576px) {
+  #joinUs .modal-dialog .modal-content {
+    width: 70%;
+    margin: auto;
+    display: block;
+  }
+  #joinUs .modal-dialog .modal-content .modal-body #btnClose {
+    transform: translate(0%, -10%);
+  }
+  #joinUs .modal-dialog .modal-content .modal-body .row .col-lg-5 .img-fluid {
+    margin: 18px auto;
+    max-width: 100%;
+    text-align: center;
+  }
+  #signUp .modal-dialog .modal-content .modal-body #btnClose {
+    transform: translate(0%, -10%);
+  }
+}
+@media screen and (max-width: 420px) {
+  .about .join .row .col-lg-9 .constellation {
+    width: 100%;
+    margin: auto;
+    display: block;
+    font-size: 1.5em;
+  }
+}
+@media screen and (max-width: 366px) {
+  #signUp .modal-dialog .modal-content .modal-body .row .col-lg-7 .contentForm form .optionConnect {
+    display: flex;
+    flex-direction: column;
+  }
+  #signUp .modal-dialog .modal-content .modal-body .row .col-lg-7 .contentForm form .optionConnect #btnConnect {
+    margin: auto;
+    display: block;
+  }
+  #signUp .modal-dialog .modal-content .modal-body .row .col-lg-7 .contentForm form .optionConnect .inscribe {
+    margin: 15px auto;
+  }
+}
+@media screen and (max-width: 320px) {
+  #joinUs .modal-dialog .modal-content {
+    margin: auto;
+    display: block;
+    width: 75%;
+  }
+  #joinUs .modal-dialog .modal-content .modal-body .row .col-lg-7 .contentForm .log {
+    font-size: 1.2em;
+  }
+  #joinUs .modal-dialog .modal-content .modal-body .row .col-lg-7 .contentForm form input {
+    margin: 10px auto;
+    width: 100%;
+  }
+  #joinUs .modal-dialog .modal-content .modal-body .row .col-lg-7 .contentForm form .optionConnect {
+    display: flex;
+    flex-direction: column;
+  }
+  #joinUs .modal-dialog .modal-content .modal-body .row .col-lg-7 .contentForm form .optionConnect #btnConnect {
+    margin: auto;
+    display: block;
+  }
+  #joinUs .modal-dialog .modal-content .modal-body .row .col-lg-7 .contentForm form .optionConnect .inscribe {
+    margin: 15px auto;
   }
 }/*# sourceMappingURL=styles.css.map */

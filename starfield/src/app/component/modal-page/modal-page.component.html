@@ -2,26 +2,29 @@
 <div class="modal fade" id="joinUs">
     <div class="modal-dialog modal-dialog-centered modal-md">
         <div class="modal-content">
-            <div class="row">
-                <div class="col-lg-5">
-                    <img src="/assets/picts/pictConstellation.jpg" class="img-fluid w-100" alt="constelattion" />
-                </div>
-                <div class="col-lg-7">
-                    <div class="contentForm">
-                        <p class="log">SE CONNECTER</p>
-                        <form action="" method="post">
-                            <label for="username"></label>
-                            <input type="text" name="username" id="username" placeholder="Nom d'utilisateur" required>
+            <div class="modal-body">
+                <button type="button" id="btnClose" data-bs-dismiss="modal"><i class="fas fa-times"></i></button>
+                <div class="row">
+                    <div class="col-lg-5">
+                        <img src="/assets/picts/pictConstellation.jpg" class="img-fluid w-100"  alt="constelattion" />
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="contentForm">
+                            <p class="log">SE CONNECTER</p>
+                            <form action="" method="post">
+                                <label for="username"></label>
+                                <input type="text" name="username" id="username" placeholder="Nom d'utilisateur" required>
 
-                            <label for="password"></label>
-                            <input type="password" name="password" id="password" placeholder="Mot de Passe" required>
-                            <div class="optionConnect">
-                                <button type="submit" id="btnConnect">CONNEXION</button>
-                                <p class="inscribe">
-                                    <a href="#" data-bs-toggle="modal" data-bs-target="#signUp">INSCRIVEZ-VOUS</a>
-                                </p>
-                            </div>
-                        </form>
+                                <label for="password"></label>
+                                <input type="password" name="password" id="password" placeholder="Mot de Passe" required>
+                                <div class="optionConnect">
+                                    <button type="submit" id="btnConnect">CONNEXION</button>
+                                    <p class="inscribe">
+                                        <a href="#" data-bs-toggle="modal" data-bs-target="#signUp">INSCRIVEZ-VOUS</a>
+                                    </p>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -33,6 +36,7 @@
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-body">
+                <button type="button" id="btnClose" data-bs-dismiss="modal"><i class="fas fa-times"></i></button>
                 <div class="row">
                     <div class="col-lg-5 col-md-5">
                         <img src="/assets/picts/pictUnitedColonies.jpg" class="img-fluid w-100" alt="unitedColonies" />
@@ -41,21 +45,23 @@
                         <div class="contentForm">
                             <p class="log">S'INSCRIRE</p>
                             <form action="" method="post">
-                                <div class="col-lg-6">
-                                    <label for="prénom"></label>
-                                    <input type="text" name="prénom" id="prénom" placeholder="Prénom" required>
-                                </div>
-                                <div class="col-lg-6">
-                                    <label for="nom"></label>
-                                    <input type="text" name="nom" id="nom" placeholder="Nom" required>
-                                </div>
-                                <div class="col-lg-6">
-                                    <label for="email"></label>
-                                    <input type="email" name="email" id="email" placeholder="Adresse E-mail" required>
-                                </div>
-                                <div class="col-lg-6">
-                                    <label for="password"></label>
-                                    <input type="password" name="password" id="password" placeholder="Mot de Passe" required>
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-12">
+                                        <label for="prénom"></label>
+                                        <input type="text" name="prénom" id="prénom" placeholder="Prénom" required>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12">
+                                        <label for="nom"></label>
+                                        <input type="text" name="nom" id="nom" placeholder="Nom" required>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12">
+                                        <label for="email"></label>
+                                        <input type="email" name="email" id="email" placeholder="Adresse E-mail" required>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12">
+                                        <label for="password"></label>
+                                        <input type="password" name="password" id="password" placeholder="Mot de Passe" required>
+                                    </div>
                                 </div>
                                 <div class="optionConnect">
                                     <button type="submit" id="btnConnect">FINALISER</button>
