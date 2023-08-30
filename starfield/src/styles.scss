@@ -214,38 +214,33 @@ $sevenColor: rgb(204, 4, 4);
 }
 
 // OFFCANVAS
-.offcanvas {
-    width: 100%;
-    height: 200px;
-    max-width: 150px;
-    background-color: $secondColor;
+#sideStar {
+    height: 190px;
+    max-width: 160px;
+    border: 1px solid $firstColor;
     border-radius: 0px 0px 0px 40px;
     .offcanvas-body {
-        border: 1px solid $firstColor;
         background-color: $secondColor;
+        border: 1px solid $firstColor;
         border-radius: 0px 0px 0px 40px;
         #btnCloseStar {
             position: relative;
-            top: -10%;
-            left: 87%;
-            font-size: 1.8em;
+            top: -6%;
+            left: 82%;
+            font-size: 1.4em;
             color: $thirdColor;
             border: transparent;
             background: transparent;
         }
         .containNav {
-            margin-top: -42px;
-            line-height: 28px;
-            text-align: center;
+            margin-top: -14px;
             .navbar-nav {
+                text-align: center;
                 .nav-item {
                     .nav-link {
-                        font-size: 1.3em;
+                        font-size: 1.1em;
                         color: $firstColor;
                         font-family: nulshock;
-                        &:hover {
-                            opacity: 0.7;
-                        }
                     }
                 }
             }
@@ -254,69 +249,76 @@ $sevenColor: rgb(204, 4, 4);
 }
 
 // CONTACT
-#contact {
-    background-position: center;
+.contact {
+    width: 100%;
+    height: 100vh;
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
-    background: url('/assets/picts/starfieldBackgroundContact.jpg');
-    .modal-dialog {
-        .modal-content {
-            opacity: 0.9;
-            background: $secondColor;
-            #btnCloseContact {
-                position: relative;
-                top: 3%;
-                left: 46%;
-                cursor: pointer;
-                font-size: 1.4em;
-                color: $firstColor;
-                border: transparent;
-                background: transparent;
-            }
-            .modal-body {
-                margin-top: -20px;
+    background-image: url('/assets/picts/starfieldBackgroundContact.jpg');
+    #btnClose {
+        position: absolute;
+        top: 3%;
+        left: 98%;
+        cursor: pointer;
+        font-size: 1.4em;
+        color: $firstColor;
+        border: transparent;
+        background: transparent;
+        transform: translate(-50%, -50%);
+    }
+    .contain {
+        .card {
+            width: 100%;
+            max-width: 480px;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, 110%);
+            background-color: $secondColor;
+            .card-body {
                 h3 {
-                    text-align: center;
                     color: $firstColor;
-                    margin-bottom: 16px;
-                    letter-spacing: 3px;
-                    font-family: conthrax;
+                    text-align: center;
+                    font-family: nulshock;
                 }
                 form {
-                    color: $firstColor;
+                    margin: 10px auto;
                     text-align: center;
-                    margin-bottom: -10px;
-                    input {
-                        width: 35%;
-                        color: $firstColor;
-                        margin-right: 15px;
-                        margin-left: 15px;
-                        text-align: center;
+                    @include flex (column);
+                    .firstInput {
+                        input {
+                            
+                            margin-left: 10px;
+                            margin-right: 10px;
+                        }
                     }
                     textarea {
-                        width: 77%;
-                        text-align: center;
-                        margin: 20px auto;
-                        color: $firstColor;
+                        width: 100%;
+                        max-width: 380px;
+                        margin: 15px auto;
+                        margin-bottom: 4px;
                     }
                 }
-            }
-            #btnSend {
-                margin: auto;
-                display: block;
-                padding: 10px;
-                font-size: 0.7em;
-                color: $firstColor;
-                letter-spacing: 2px;
-                font-family: conthrax;
-                background: transparent;
-                transition: all 0.25ms ease;
-                border: 3px solid $firstColor;
-                &:hover {
-                    background: rgb(106, 96, 244);
-                }
-                &:active {
-                    transform: translateY(20%);
+                #btnSend {
+                    padding: 4px;
+                    margin: auto;
+                    display: block;
+                    font-size: 0.9em;
+                    letter-spacing: 2px;
+                    color: $firstColor;
+                    border-radius: 40px;
+                    font-family: nulshock;
+                    background: transparent;
+                    border: 2px solid $firstColor;
+                    transition: all 0.25ms ease;
+                    &:hover {
+                        color: $secondColor;
+                        background-color: $firstColor;
+                    }
+                    &:active {
+                        transform: translateY(5px);
+                    }
                 }
             }
         }
@@ -324,68 +326,63 @@ $sevenColor: rgb(204, 4, 4);
 }
 
 // LOG IN/ SING UP
-#joinUs {
+.joinUs {
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     background-image: url('/assets/picts/starfieldBackgroundLogIn.jpg');
-    .modal-dialog {
-        .modal-content {
-            .modal-body {
-                #btnClose {
-                    position: relative;
-                    top: 1%;
-                    left: 95%;
-                    transform: translate(20%, -10%);
-                    font-size: 1.6em;
-                    margin: -30px auto;
-                    color: $thirdColor;
-                    border: transparent;
-                    background: transparent;
+    #btnClose {
+        position: absolute;
+        top: 3%;
+        left: 98%;
+        cursor: pointer;
+        font-size: 1.4em;
+        color: $firstColor;
+        border: transparent;
+        background: transparent;
+        transform: translate(-50%, -50%);
+    }
+    .contain {
+        .join {
+            position: absolute;
+            top: 18%;
+            left: 52%;
+            text-align: center;
+           .log {
+                font-size: 1.6em;
+                color: $firstColor;
+                font-family: conthrax;
+            }
+            form {
+                input {
+                    margin-right: 10px;
+                    margin-left: 10px;
+                    letter-spacing: 2px;
+                    font-family: soloist;
                 }
-                .row {
-                    margin-top: -19px;
-                    .col-lg-5 {
-                        img {
-                            height: 190px;
-                            max-width: 450px;
+                .optionConnect {
+                    justify-content: center;
+                    margin-top: 15px;
+                    column-gap: 20px;
+                    align-items: center;
+                    @include flex (row);
+                    #btnConnect {
+                        color: $firstColor;
+                        font-family: nulshock;
+                        background: transparent;
+                        border: 2px solid $firstColor;
+                        &:hover {
+                            opacity: 0.7;
                         }
                     }
-                    .col-lg-7 {
-                        .contentForm {
-                            margin-top: 10px;
-                            text-align: center;
-                            .log {
-                                font-size: 1.5em;
-                                font-weight: bold;
-                                font-family: nulshock
-                            }
-                            form {
-                                margin-top: -10px;
-                                input {
-                                    margin-top: 10px;
-                                }
-                            }
-                            .optionConnect {
-                                margin: 15px auto;
-                                @include flex (row);
-                                #btnConnect {
-                                    padding: 6px;
-                                    height: 35px;
-                                    font-size: 0.7em;
-                                    margin-right: 20px;
-                                    letter-spacing: 2px;
-                                    color: $secondColor;
-                                    font-family: conthrax;
-                                    background: transparent;
-                                    border: 3px solid $secondColor;
-                                    &:hover {
-                                        color: $firstColor;
-                                        background: $secondColor;
-                                    }
-                                }
-                                .inscribe {
-                                    a {
-                                        font-size: 0.8em;
-                                    }
-                                }
+                    .inscribe {
+                        margin-top: 7px;
+                        a {
+                            font-family: nulshock;
+                            &:hover {
+                                color: $firstColor;
                             }
                         }
                     }
@@ -395,78 +392,74 @@ $sevenColor: rgb(204, 4, 4);
     }
 }
 
-#signUp {
+.signUp {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     background-image: url('/assets/picts/starfieldBackgroundSignUp.jpg');
-    .modal-dialog {
-        max-width: 750px;
-        .modal-content {
-            width: 100%;
-            .modal-body {
-                #btnClose {
-                    position: relative;
-                    top: 1%;
-                    left: 95%;
-                    transform: translate(20%, -10%);
-                    font-size: 1.6em;
-                    margin: -30px auto;
-                    color: $thirdColor;
-                    border: transparent;
-                    background: transparent;
+    #btnClose {
+        position: absolute;
+        top: 3%;
+        left: 99%;
+        cursor: pointer;
+        font-size: 1.4em;
+        color: $secondColor;
+        border: transparent;
+        background: transparent;
+        transform: translate(-50%, -50%);
+    }
+    .contain {
+        .inscribe {
+            position: absolute;
+            top: 16%;
+            left: -3%;
+            text-align: center; 
+            .log {
+                font-size: 1.6em;
+                color: $secondColor;
+                font-family: conthrax;
+            }
+            form {
+                .firstInput {
+                    input {
+                        margin-right: 10px;
+                        margin-left: 10px;
+                        letter-spacing: 2px;
+                        font-family: soloist;
+                    }
                 }
-                .row {
-                    margin: -15px auto;
-                    margin-bottom: 15px;
-                    .col-lg-5 {
-                        .img-fluid {
-                            margin: auto;
-                            display: block;
-                            height: 100%;
-                            max-width: 450px;
+                .secondInput {
+                    margin: 16px auto;
+                    input {
+                        margin-right: 10px;
+                        margin-left: 10px;
+                        letter-spacing: 2px;
+                        font-family: soloist;
+                    }
+                }
+                .optionInscribe {
+                    justify-content: center;
+                    margin-top: 5px;
+                    column-gap: 20px;
+                    align-items: center;
+                    @include flex (row);
+                    #btnInscribe {
+                        color: $secondColor;
+                        font-family: nulshock;
+                        background: transparent;
+                        border: 2px solid $secondColor;
+                        &:hover {
+                            opacity: 0.7;
                         }
                     }
-                    .col-lg-7 {
-                        .contentForm {
-                            text-align: center;
-                            .log {
-                                font-size: 1.5em;
-                                font-weight: bold;
-                                font-family: nulshock;
-                            }
-                            form {
-                                margin-top: -20px;
-                                .row {
-                                    .col-lg-6 {
-                                        line-height: 20px;
-                                        input {
-                                            margin-top: 15px;
-                                        }
-                                    }
-                                }
-                            }
-                            .optionConnect {
-                                margin: 25px auto;
-                                @include flex (row);
-                                justify-content: center;
-                                #btnConnect {
-                                    padding: 6px;
-                                    height: 35px;
-                                    font-size: 0.7em;
-                                    margin-right: 20px;
-                                    letter-spacing: 2px;
-                                    color: $secondColor;
-                                    font-family: conthrax;
-                                    background: transparent;
-                                    border: 3px solid $secondColor;
-                                    &:hover {
-                                        color: $firstColor;
-                                        background: $secondColor;
-                                    }
-                                }
-                                .inscribe {
-                                    a {
-                                        font-size: 0.8em;
-                                    }
-                                }
+                    .connect {
+                        margin-top: 12px;
+                        a {
+                            font-family: nulshock;
+                            &:hover {
+                                color: $secondColor;
                             }
                         }
                     }
@@ -477,7 +470,54 @@ $sevenColor: rgb(204, 4, 4);
 }
 
 // PRE-RELEASE
-
+.preRelease {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('/assets/picts/starfieldBackgroundPreRelease.png');
+    #btnClose {
+        position: absolute;
+        top: 3%;
+        left: 99%;
+        cursor: pointer;
+        font-size: 1.4em;
+        color: $firstColor;
+        border: transparent;
+        background: transparent;
+        transform: translate(-50%, -50%);
+        text-shadow: 2px 2px 2px #000000;
+    }
+    .contain {
+        position: relative;
+        top: 5%;
+        .choose {
+            color: $firstColor;
+            text-align: center;
+            font-family: nulshock;
+            text-shadow: 2px 2px 2px #000000;
+        }
+        .listRelease {
+            margin: 10px auto;
+            text-align: center;
+            .row {
+                .col-lg-6 {
+                    margin: 19px auto;
+                    .img-fluid {
+                        height: 320px;
+                        cursor: pointer;
+                        max-width: 600px;
+                        transition: all 0.25ms ease;
+                        &:hover {
+                            transform: scale(0.9);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 // FONTS
 @font-face {
@@ -496,6 +536,19 @@ $sevenColor: rgb(204, 4, 4);
 }
 
 // MEDIA QUERRY
+@media screen and (max-width: 1440px) {
+    .joinUs {
+        .contain {
+           .join {
+            position: absolute;
+            top: 18%;
+            left: 10%;
+            text-align: center;
+           } 
+        }
+    }
+}
+
 @media screen and (max-width: 1024px) {
     .show {
         background-image: url('/assets/picts/starfieldLaunchBackground.jpg');
@@ -516,7 +569,23 @@ $sevenColor: rgb(204, 4, 4);
                 }
             }
         }
-    }   
+    } 
+    .preRelease {
+        #btnClose {
+            left: 98%;
+        }
+        .contain {
+            .listRelease {
+                .row {
+                    .col-lg-6 {
+                        .img-fluid {
+                            max-width: 410px;
+                        }
+                    }
+                }
+            }
+        }
+    }  
 }
 
 @media screen and (max-width: 992px) {
@@ -601,34 +670,114 @@ $sevenColor: rgb(204, 4, 4);
     }
 }
 
+@media screen and (max-width: 875px) {
+    .preRelease {
+        .contain {
+            .choose {
+                font-size: 1.5em;
+            }
+            .listRelease {
+                .row {
+                    .col-lg-6 {
+                        .img-fluid {
+                            max-width: 340px;
+                        }
+                    }
+                }
+            }
+        }
+    } 
+}
+ 
+@media screen and (max-width: 809px) {
+    .joinUs {
+        background-image: url('/assets/picts/starfieldBackgroundLogInResponsive.jpeg');
+        #btnClose {
+            left: 98%;
+        }
+    }
+}
+
 @media screen and (max-width: 768px) {
-    #signUp {
-        .modal-dialog {
-            .modal-content {
-                margin: auto;
-                display: block;
-                width: 65%;
-                .modal-body {
-                    .row {
-                        .col-lg-7 {
-                            text-align: center;
-                            height: 100%;
-                            margin: 20px auto;
-                            margin-bottom: -30px;
-                            .contentForm {
-                                form {
-                                    .row {
-                                        .col-lg-6 {
-                                            input {
-                                                width: 100%;
-                                                display: block;
-                                                margin: auto;
-                                            }
-                                        }
+    .joinUs {
+        .contain {
+            .join {
+                left: 13%;
+            }
+        }
+    }
+    .signUp {
+        background-image: url('/assets/picts/starfieldBackgroundSignUpResponsive.jpeg');
+        #btnClose {
+            left: 97%;
+            color: $firstColor;
+        }
+        .contain {
+            .inscribe {
+                .row {
+                    .log {
+                        font-size: 1.4em;
+                        color: $firstColor;
+                    }
+                    form {
+                        .optionInscribe {
+                            #btnInscribe {
+                                padding: 3px;
+                                color: $firstColor;
+                                border: 2px solid $firstColor;
+                            }
+                            .connect {
+                                a {
+                                    &:hover {
+                                        color: $firstColor;
                                     }
                                 }
                             }
                         }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .preRelease {
+        .contain {
+            .listRelease {
+                .row {
+                    .col-lg-6 {
+                        .img-fluid {
+                            height: 140px;
+                            max-width: 490px;
+                            &:hover {
+                                transform: scale(1.2);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    } 
+}
+
+@media screen and (max-width: 645px) {
+    .joinUs {
+        #btnClose {
+            left: 96%;
+        }
+        .contain {
+            .join {
+                left: 6%;
+                .log {
+                    margin-bottom: -5px;
+                }
+                form {
+                    input {
+                        margin-top: 10px;
+                    }
+                    .optionConnect {
+                        @include flex (column);
                     }
                 }
             }
@@ -673,6 +822,116 @@ $sevenColor: rgb(204, 4, 4);
   }
 }
 
+@media screen and (max-width: 546px) {
+    .signUp {
+        .contain {
+            .inscribe {
+                .row {
+                    .log {
+                        margin-bottom: -6px;
+                    }
+                    form {
+                        .firstInput, .secondInput {
+                            input {
+                                margin-top: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 522px) {
+    .preRelease {
+        .contain {
+            top: 9%;
+            .listRelease {
+                .row {
+                    .col-lg-6 {
+                        .img-fluid {
+                            height: 120px;
+                            max-width: 300px;
+                        }
+                    }
+                }
+            }
+        }
+    } 
+}
+
+@media screen and (max-width: 510px) {
+    .contact {
+        .contain {
+            .card {
+                max-width: 340px;
+                transform: translate(-50%, 80%);
+                .card-body {
+                    form {
+                        .firstInput {
+                            @include flex (column);
+                            input {
+                                width: 76%;
+                                margin: 10px auto;
+                            }
+                        }
+                        textarea {
+                            max-width: 236px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 466px) {
+    .preRelease {
+        .contain {
+            top: 9%;
+            .choose {
+                font-size: 1.2em;
+            }
+            .listRelease {
+                .row {
+                    .col-lg-6 {
+                        .img-fluid {
+                            height: 120px;
+                            max-width: 300px;
+                        }
+                    }
+                }
+            }
+        }
+    } 
+}
+
+@media screen and (max-width: 442px) {
+    .preRelease {
+        #btnClose {
+            left: 93%;
+        }
+        .contain {
+            .choose {
+                letter-spacing: 2px;
+                font-size: 0.6em;
+            }
+            .listRelease {
+                .row {
+                    .col-lg-6 {
+                        .img-fluid {
+                            &:hover {
+                                transform: scale(0.9);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    } 
+}
+
 @media screen and (max-width: 420px) {
     .about {
         .join {
@@ -683,6 +942,66 @@ $sevenColor: rgb(204, 4, 4);
                         margin: auto;
                         display: block;
                         font-size: 1.5em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 395px) {
+    .signUp {     
+        .contain {
+            .inscribe {
+                .row {
+                    .log {
+                        font-size: 1.2em;
+                        margin-bottom: -2px
+                    }
+                    form {
+                        .optionInscribe {
+                            @include flex (column);
+                            #btnInscribe {
+                                padding: 3px;
+                                color: $firstColor;
+                                border: 2px solid $firstColor;
+                            }
+                            .connect {
+                                a {
+                                    &:hover {
+                                        color: $firstColor;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .contact {
+        #btnClose {
+            left: 97%;
+        }
+        .contain {
+            .card {
+                max-width: 240px;
+                transform: translate(-50%, 65%);
+                .card-body {
+                    form {
+                        .firstInput {
+                            @include flex (column);
+                            input {
+                                width: 76%;
+                                margin: 10px auto;
+                            }
+                        }
+                        textarea {
+                            max-width: 166px;
+                        }
                     }
                 }
             }

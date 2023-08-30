@@ -41,9 +41,9 @@
     <div class="join">
         <div class="row">
             <div class="col-lg-9">
-                <h2 class="constellation">REJOINGNEZ LA CONSTALLATION</h2>
+                <h2 class="constellation">REJOIGNEZ LA CONSTALLATION</h2>
                 <p class="updates">Devenez un pionnier pour recevoir des news et des mises à jour à venir concernant Starfield.</p>
-                <button type="button" id="btnJoinUs" data-bs-toggle="modal" data-bs-target="#joinUs">INSCRIVEZ-VOUS</button>
+                <button type="button" id="btnJoinUs" routerLink="/join-page" routerLinkActive="active">INSCRIVEZ-VOUS</button>
             </div>
             <div class="col-lg-3">
                 <img src="/assets/picts/starfieldConstellation.png" class="img-fluid w-100" alt="constellation" />
@@ -52,6 +52,20 @@
     </div>
     <div class="footer">
         <p class="copyrigth">© Starfield 2023</p>
-        <button type="button" id="btnContact" data-bs-toggle="modal" data-bs-target="#contact">CONTACT</button>
+        <button type="button" id="btnContact" routerLink="/contact-page" routerLinkActive="active">CONTACT</button>
+    </div>
+</div>
+
+<!-- OFFCANVAS -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="sideStar" style="background-repeat: no-repeat;">
+    <div class="offcanvas-body">
+        <button type="button" id="btnCloseStar" data-bs-dismiss="offcanvas"><i class="fas fa-times"></i></button>
+        <div class="containNav">
+            <div class="navbar-nav">
+                <li class="nav-item"><a href="#" class="nav-link">NEWS</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">MEDIA</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">CREATION</a></li>
+            </div>
+        </div>
     </div>
 </div>
